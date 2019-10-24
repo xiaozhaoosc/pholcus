@@ -91,6 +91,8 @@ public class OkHttpClientDemo {
         });
     }
     public static void main(String[] args) {
+        System.setProperty("http.proxyHost", "127.0.0.1");
+        System.setProperty("http.proxyPort", "1080");
         OkHttpClientDemo okHttpClientDemo = new OkHttpClientDemo();
         okHttpClientDemo.pool("https://api.tumblr.com/v2/blog/idolsgeneration/posts/photo?api_key=nXcMfImiJuDIhaO7qNT1VF234UhRID8yab3f5tvUoOhCMDUk3y&limit=1&offset=1");
     }
