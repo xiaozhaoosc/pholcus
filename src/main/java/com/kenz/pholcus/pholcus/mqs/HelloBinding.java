@@ -13,10 +13,11 @@ import org.springframework.messaging.SubscribableChannel;
  * @date 2019/10/24 10:05
  */
 public interface HelloBinding {
-    String GREETING = "greetingChannel";
+    String MSGCONSUMER = "msgMqConsumer";
+    String MSGPROD = "msgMqProducer";
 
-    @Input(GREETING)
+    @Input(MSGCONSUMER)
     SubscribableChannel greetingin();
-    @Output(GREETING)
+    @Output(MSGPROD)
     MessageChannel greetingout();
 }

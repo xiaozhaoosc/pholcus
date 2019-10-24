@@ -12,7 +12,7 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 @EnableBinding(HelloBinding.class)
 public class HelloListener {
 
-    @StreamListener(target = HelloBinding.GREETING)
+    @StreamListener(target = HelloBinding.MSGCONSUMER)
     public void processHelloChannelGreeting(String msg) {
         System.out.println(msg);
     }
